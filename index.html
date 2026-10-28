@@ -2,103 +2,344 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claravium Technologies — Audit-clean alpha research and signals platform</title>
-  <meta name="description" content="Audit-clean alpha research and signals platform for capital markets.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claravium Technologies — Fund Anvil</title>
+  <meta name="description" content="Fund Anvil gives fund-shelf and product-governance teams cited evidence on every fund they offer, from each fund’s own public documents.">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Claravium Technologies">
-  <meta property="og:description" content="Audit-clean alpha research and signals platform for capital markets.">
-  <meta property="og:url" content="https://claraviumtechnologies.com">
+  <meta name="author" content="Claravium Technologies">
+  <meta name="theme-color" content="#017574">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://claraviumtechnologies.com/">
+  <meta property="og:title" content="Every fund on the shelf, backed by evidence.">
+  <meta property="og:description" content="Fund Anvil gives fund-shelf and product-governance teams cited evidence on every fund they offer, from each fund’s own public documents.">
+  <meta property="og:url" content="https://claraviumtechnologies.com/">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>★</text></svg>">
-  <style>
-    :root {
-      --bg: #0a0a0a;
-      --fg: #e8e8e8;
-      --muted: #9a9a9a;
-      --accent: #1ec8c8;
-      --rule: rgba(30, 200, 200, 0.55);
+  <meta property="og:site_name" content="Claravium Technologies">
+  <meta property="og:image" content="https://claraviumtechnologies.com/assets/og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Claravium Technologies logo, a teal C with a square citation marker, beside the line Every fund on the shelf, backed by evidence.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Every fund on the shelf, backed by evidence.">
+  <meta name="twitter:description" content="Fund Anvil gives fund-shelf and product-governance teams cited evidence on every fund they offer, from each fund’s own public documents.">
+  <meta name="twitter:image" content="https://claraviumtechnologies.com/assets/og.png">
+  <meta name="twitter:image:alt" content="Claravium Technologies logo, a teal C with a square citation marker.">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/favicon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Claravium Technologies",
+    "url": "https://claraviumtechnologies.com/",
+    "logo": "https://claraviumtechnologies.com/assets/logo.png",
+    "email": "tuomas.siren@claraviumtechnologies.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Espoo",
+      "addressCountry": "FI"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Tuomas Siren",
+      "jobTitle": "Founder"
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body {
-      height: 100%;
-      overflow: hidden;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -webkit-text-size-adjust: 100%;
-    }
-    body {
-      height: 100dvh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: clamp(1.75rem, 7vw, 6rem);
-    }
-    main { width: 100%; max-width: 64rem; }
-
-    h1 {
-      color: var(--accent);
-      font-size: clamp(2rem, 7vw, 4rem);
-      font-weight: 900;
-      line-height: 1.04;
-      letter-spacing: 0.01em;
-    }
-    .rule {
-      width: 100%;
-      height: 2px;
-      background: var(--rule);
-      margin: clamp(1rem, 3vw, 1.75rem) 0;
-    }
-    .tagline {
-      font-size: clamp(1rem, 2.3vw, 1.45rem);
-      font-weight: 500;
-      line-height: 1.4;
-      color: var(--fg);
-    }
-
-    .contact {
-      margin-top: clamp(1.75rem, 5vw, 3rem);
-      font-size: clamp(0.85rem, 1.5vw, 1rem);
-      line-height: 1.7;
-    }
-    .contact a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-    }
-    .contact a:hover { border-bottom-color: var(--accent); }
-
-    footer {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: clamp(1rem, 3vw, 2rem);
-      text-align: center;
-      color: var(--muted);
-      font-size: clamp(0.65rem, 1vw, 0.78rem);
-      letter-spacing: 0.03em;
-    }
-
-    @media (max-height: 460px) {
-      .rule { margin: 0.6rem 0; }
-      .contact { margin-top: 1rem; }
-      footer { position: static; margin-top: 1.25rem; }
-      body { overflow: auto; }
-    }
-  </style>
+  }
+  </script>
 </head>
 <body>
-  <main>
-    <h1>CLARAVIUM<br>TECHNOLOGIES</h1>
-    <div class="rule"></div>
-    <p class="tagline">Audit-clean alpha research and signals platform for capital markets.</p>
-    <div class="contact">
-      <div><a href="mailto:contact@claraviumtechnologies.com">contact@claraviumtechnologies.com</a></div>
-    </div>
-  </main>
-  <footer>Claravium Technologies · 2026</footer>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="header-bar">
+        <a class="brand" href="#main">
+          <img src="assets/logo.png" width="614" height="614" alt="">
+          <span>Claravium Technologies</span>
+        </a>
+        <a class="header-mail" href="mailto:tuomas.siren@claraviumtechnologies.com">tuomas.siren@claraviumtechnologies.com</a>
+        <details class="nav-mobile">
+          <summary>Menu</summary>
+          <nav aria-label="Page">
+            <a href="#shelf">Shelf</a>
+            <a href="#problem">Problem</a>
+            <a href="#product">Product</a>
+            <a href="#examination">Examination</a>
+            <a href="#proof">Proof</a>
+            <a href="#who">Who it’s for</a>
+            <a href="#access">Access</a>
+            <a href="#founder">Founder</a>
+            <a href="mailto:tuomas.siren@claraviumtechnologies.com">tuomas.siren@claraviumtechnologies.com</a>
+          </nav>
+        </details>
+      </div>
+      <nav class="nav-desktop" aria-label="Page">
+        <a href="#shelf">Shelf</a>
+        <a href="#problem">Problem</a>
+        <a href="#product">Product</a>
+        <a href="#examination">Examination</a>
+        <a href="#proof">Proof</a>
+        <a href="#who">Who it’s for</a>
+        <a href="#access">Access</a>
+        <a href="#founder">Founder</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Espoo, Finland</p>
+          <h1 id="hero-title">Every fund on the shelf, backed by evidence.</h1>
+          <p class="byline"><strong>Fund Anvil</strong> by Claravium Technologies</p>
+          <p class="lede">Fund Anvil gives fund-shelf and product-governance teams at banks and fund platforms cited evidence on every fund they offer, from each fund’s own public documents.</p>
+        </div>
+        <div class="hero-mark">
+          <img src="assets/logo-white.png" width="614" height="614" alt="Claravium Technologies">
+        </div>
+      </section>
+
+      <section class="section" id="shelf" aria-labelledby="shelf-title">
+        <div class="split">
+          <div>
+            <p class="numeral" aria-hidden="true">02</p>
+            <p class="kicker">The shelf</p>
+            <h2 id="shelf-title">A large Nordic bank offers its customers ~600 funds.</h2>
+            <p>Most come from outside managers. Each fund carries a prospectus, a KID, an SFDR annex and periodic reports.</p>
+          </div>
+          <ul class="stat-panel">
+            <li><strong>~600</strong> <span>funds on the shelf</span></li>
+            <li><strong>~2,500</strong> <span>documents behind them</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="problem" aria-labelledby="problem-title">
+        <div class="split">
+          <div>
+            <p class="numeral" aria-hidden="true">03</p>
+            <p class="kicker">The bank’s problem</p>
+            <h2 id="problem-title">The bank must stand behind every fund it sells.</h2>
+            <p>Its own criteria (exclusions, sustainability minimums, naming rules) are checked by hand, if at all.</p>
+          </div>
+          <blockquote class="quote-panel">
+            <p>“Nobody can say, from evidence, why each fund is on the shelf.”</p>
+            <footer class="quote-note">The open question</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="section" id="documents" aria-labelledby="documents-title">
+        <div class="split">
+          <div>
+            <p class="numeral" aria-hidden="true">04</p>
+            <p class="kicker">The hidden problem</p>
+            <h2 id="documents-title">The documents themselves can’t be trusted.</h2>
+            <p>It surfaces only at marketing review, in distributor due diligence, or when the regulator asks.</p>
+          </div>
+          <div class="issue-grid">
+            <article class="issue-card">
+              <h3>Stale</h3>
+              <p>KIDs and fund pages go out of date and keep old costs and risk scores.</p>
+            </article>
+            <article class="issue-card">
+              <h3>Contradictory</h3>
+              <p>Costs, risk scores and holdings differ between prospectus, KID, SFDR annex and reports.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="customers" aria-labelledby="customers-title">
+        <div class="customer">
+          <p class="giant" aria-hidden="true">600</p>
+          <div>
+            <p class="kicker">The customer’s problem</p>
+            <h2 id="customers-title">If the bank doesn’t understand its shelf, <span class="teal">its customers can’t either.</span></h2>
+            <p>Customers face ~600 choices with the same unclear facts.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="product" aria-labelledby="product-title">
+        <div class="split">
+          <div>
+            <p class="numeral" aria-hidden="true">06</p>
+            <p class="kicker">The product</p>
+            <h2 id="product-title">Fund Anvil: cited evidence on every fund.</h2>
+            <ul class="steps">
+              <li>Reads every fund’s full public document set.</li>
+              <li>Checks it against the bank’s own criteria.</li>
+              <li>Flags stale and contradictory documents.</li>
+              <li>Cites the page behind every finding.</li>
+              <li class="access-line">In the app, by API, or through MCP in your own AI tools.</li>
+            </ul>
+          </div>
+          <p class="review-panel"><strong>Disclosure Review</strong> checks whether a fund’s documents agree with each other.</p>
+        </div>
+      </section>
+
+      <section class="section section-center" id="examination" aria-labelledby="examination-title">
+        <p class="kicker">Fund Examination</p>
+        <h2 id="examination-title">What one examination covers.</h2>
+        <p class="lead">Six sections, with every fund compared side by side. Figures from the examination of one Finnish fund manager’s public documents.</p>
+        <div class="exam">
+          <article>
+            <h3>Return</h3>
+            <p>Each fund against cash and against its own benchmark, net of fees, year by year.</p>
+          </article>
+          <article>
+            <h3>Risk</h3>
+            <p>Drawdowns, recovery, and the risk rating against measured volatility. One fund: deepest loss −56%, worst calendar year −53%, 23 months to recover.</p>
+          </article>
+          <article>
+            <h3>Cost</h3>
+            <p>Published cost figures against what was actually charged. One fund: a 1.15% ongoing charge, but 2.42% actually charged in 2025.</p>
+          </article>
+          <article>
+            <h3>Money leaving</h3>
+            <p>Fund size and investor flows. Four funds lost 28% of value to redemptions in a year they returned +3% to +32%.</p>
+          </article>
+          <article>
+            <h3>Holdings</h3>
+            <p>Not one individual holding named in any audited annual report.</p>
+          </article>
+          <article>
+            <h3>What is published</h3>
+            <p>Which figures each fund publishes, and which none of its documents state.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="proof" aria-labelledby="proof-title">
+        <div class="split">
+          <div>
+            <p class="numeral" aria-hidden="true">08</p>
+            <p class="kicker">Proof</p>
+            <h2 id="proof-title">Tested on one Finnish fund manager’s public documents.</h2>
+            <p>A full Fund Examination and a Disclosure Review, from public files only, unpaid and unsolicited.</p>
+            <p>Each finding comes with a severity and a fix.</p>
+          </div>
+          <ul class="stat-panel">
+            <li><strong>40</strong> <span>public documents</span></li>
+            <li><strong>4</strong> <span>funds</span></li>
+            <li><strong>11</strong> <span>findings</span></li>
+          </ul>
+        </div>
+        <figure class="finding-card">
+          <figcaption>Real finding · anonymised</figcaption>
+          <table class="finding">
+            <tbody>
+              <tr>
+                <th scope="row">Fund</th>
+                <td>A property fund</td>
+              </tr>
+              <tr>
+                <th scope="row">Finding</th>
+                <td>Fund page advertises an 8–10% a year return target; the KID forecasts 4.9% a year after costs; 8% and 10% are the performance-fee hurdles in the fund rules.</td>
+              </tr>
+              <tr>
+                <th scope="row">Severity</th>
+                <td><strong>High</strong></td>
+              </tr>
+              <tr>
+                <th scope="row">Effort</th>
+                <td>One page edit</td>
+              </tr>
+              <tr>
+                <th scope="row">Evidence</th>
+                <td>Fund page; KID p.2; fund rules §11</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </section>
+
+      <section class="section section-center" id="who" aria-labelledby="who-title">
+        <h2 id="who-title">What it unlocks</h2>
+        <div class="audience-grid">
+          <article class="audience">
+            <h3>Bank side</h3>
+            <div class="audience-body">
+              <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+                <circle cx="24" cy="15" r="6" fill="none" stroke="#017574" stroke-width="1.75"/>
+                <path d="M10 37.5c1.8-6.2 6.4-9.5 14-9.5s12.2 3.3 14 9.5" fill="none" stroke="#017574" stroke-width="1.75" stroke-linecap="round"/>
+              </svg>
+              <ul>
+                <li>Knows what it offers and why.</li>
+                <li>Knows which managers to chase.</li>
+                <li>Advisers and fund pages get clear, cited facts.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="audience">
+            <h3>Fund-manager side</h3>
+            <div class="audience-body">
+              <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+                <path d="M24 10a14 14 0 1 0 12.2 7.1" fill="none" stroke="#017574" stroke-width="1.75" stroke-linecap="round"/>
+                <path d="M36 8v8h-8" fill="none" stroke="#017574" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <ul>
+                <li>Fixes its documents before distributor due diligence.</li>
+                <li>Runs a private continuous monitor of its own published record.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <p class="disclaimer">Evidence, not audit, compliance advice or investment recommendations.</p>
+      </section>
+
+      <section class="section section-center" id="monitor" aria-labelledby="monitor-title">
+        <h2 id="monitor-title">A continuous monitor, not a one-off report.</h2>
+        <div class="monitor-grid">
+          <article>
+            <h3>Banks, platforms and wealth managers</h3>
+            <p>Subscribe to cover the funds on their shelf.</p>
+          </article>
+          <article>
+            <h3>Fund managers and ManCos</h3>
+            <p>Monitor their own published documents before distributor due diligence.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-center" id="access" aria-labelledby="access-title">
+        <p class="kicker">Access</p>
+        <h2 id="access-title">In the app, by API, or through MCP in your own AI tools.</h2>
+        <ul class="channels">
+          <li>App</li>
+          <li>API</li>
+          <li>MCP</li>
+        </ul>
+      </section>
+
+      <section class="section" id="founder" aria-labelledby="founder-title">
+        <div class="founder">
+          <img src="assets/logo.png" width="614" height="614" alt="">
+          <div class="v-rule" aria-hidden="true"></div>
+          <div>
+            <p class="role">Founder, Claravium Technologies</p>
+            <h2 id="founder-title">Tuomas Siren</h2>
+            <p>30+ years in software architecture and infrastructure security across financial services, telecom and technology.</p>
+            <p class="place">Espoo, Finland</p>
+            <p><a href="mailto:tuomas.siren@claraviumtechnologies.com">tuomas.siren@claraviumtechnologies.com</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="disclaimer">Evidence, not audit, compliance advice or investment recommendations.</p>
+      <p class="footer-meta">
+        <span>Claravium Technologies</span>
+        <span>Espoo, Finland</span>
+        <a href="mailto:tuomas.siren@claraviumtechnologies.com">tuomas.siren@claraviumtechnologies.com</a>
+      </p>
+      <p class="footer-copy">© 2026 Claravium Technologies</p>
+    </footer>
+  </div>
 </body>
 </html>
