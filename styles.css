@@ -250,6 +250,13 @@ a:hover { color: #015e5d; }
   color: var(--ink);
   margin: 0;
 }
+.raise-line {
+  margin: 1.15rem 0 0;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--teal);
+}
 
 .hero-mark {
   background: var(--teal);
@@ -534,6 +541,36 @@ a:hover { color: #015e5d; }
   font-size: 1.05rem;
   line-height: 1.45;
 }
+.source {
+  margin: 0.85rem 0 0;
+  color: var(--ink);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+.comp-grid { margin-top: 1.5rem; }
+.wedge { margin-top: 1.15rem; }
+.path-note {
+  margin: 1.75rem auto 0;
+  max-width: 40rem;
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+.roadmap {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+.roadmap article {
+  border-top: 2px solid var(--teal);
+  padding-top: 0.9rem;
+}
+.roadmap h3 {
+  margin: 0 0 0.45rem;
+  color: var(--teal);
+  font-size: 1.05rem;
+}
+.roadmap p { margin: 0; color: var(--navy); }
 
 .monitor-grid {
   display: grid;
@@ -638,6 +675,7 @@ a:hover { color: #015e5d; }
 }
 
 @media (min-width: 800px) {
+  .roadmap { grid-template-columns: 1fr 1fr 1fr; gap: 1.75rem; }
   .exam { grid-template-columns: 1fr 1fr 1fr; }
   .exam article { padding: 1.45rem 1.35rem 1.55rem 0; }
   .exam article:nth-child(3n+2),
